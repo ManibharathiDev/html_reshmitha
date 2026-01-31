@@ -1,0 +1,67 @@
+/* div{
+    background-color: red;
+    height: 250px;
+} */
+
+.firstDiv{
+    background-color: green;
+    height: 150px;
+}
+
+.secondDiv{
+    background-color: chocolate;
+    height: 150px;
+}
+
+.colFirstDiv{
+    background-color: red;
+    height: 150px;
+    width: 40%;
+    float: left;
+}
+
+/* .colClearFix{
+    width: 10%;
+    float: left;
+} */
+
+.colSecondDiv{
+    background-color: blueviolet;
+    height: 150px;
+    width: 40%;
+    float: left;
+}
+
+.colThirdDiv{
+     background-color: rgb(3, 116, 176);
+    height: 150px;
+    width: 20%;
+    float: left;
+}
+
+.flexFirstDiv{
+    background-color: rgba(12, 3, 74, 0.304);
+    height: 200px;
+    width: 20%;
+}
+
+.flexSecondDiv{
+    background-color: rgba(107, 210, 233, 0.304);
+    height: 200px;
+    width: 30%;
+}
+
+.flexThirdDiv{
+    background-color: rgba(218, 90, 110, 0.304);
+    height: 500px;
+    width: 40%;
+}
+
+.flexParent{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    /* align-content: stretch; */
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
