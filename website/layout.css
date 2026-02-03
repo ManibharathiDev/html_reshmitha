@@ -1,0 +1,57 @@
+body{
+    margin: 0px;
+}
+
+.qtreeTop{
+    background-color: #0C9786;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container{
+    width:90%;
+    margin:0 auto;
+}
+
+.qtreeTopLeft{
+    color: white;
+    font-weight: bold;
+}
+
+.qtreeTopFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.qtreeTopIcons{
+    list-style-type: none;
+    margin: 0;
+}
+
+.qtreeTopIcons li{
+    display: inline;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.qtreeMenus{
+    background-color: #3D3D3D;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.qtreeMenuFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuLogoLeft .logo{
+    width: 20%;
+}
+
+.menuLogoLeft .iso{
+    width: 8%;
+}
