@@ -46,6 +46,7 @@ body{
 .qtreeMenuFlex{
     display: flex;
     justify-content: space-between;
+        align-items: center;
 }
 
 .menuLogoLeft .logo{
@@ -54,4 +55,49 @@ body{
 
 .menuLogoLeft .iso{
     width: 8%;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    display: inline;
+    color: white;
+    margin-left: 10px;
+}
+
+.menu li a{
+    color: white;
+    text-decoration:none;
+}
+
+.menu li a:hover{
+    /* text-decoration: underline; */
+    color: brown;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.slider img{
+    width: 100%;
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.bookDemo{
+    position: fixed;
+    background: red;
+    transform: rotate(-90deg);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    top: 260px;
+    right: -60px;
 }
