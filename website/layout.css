@@ -86,7 +86,7 @@ body{
 }
 
 .slider{
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     z-index: -1;
 }
@@ -100,4 +100,100 @@ body{
     font-weight: bold;
     top: 260px;
     right: -60px;
+}
+
+.bgContact{
+    background: url('bg-review.jpg');
+    height:auto;
+    overflow: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.bgContacts h2{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.bgContacts{
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.mainLogos{
+    width:60%;
+    float:left
+}
+
+.bgForms{
+    width: 30%;
+    float:right;
+}
+
+.logoRatings{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoRatings img{
+    width: 100%;
+}
+
+.logoRatings h3{
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    margin:0;
+}
+
+.logoRat{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+} 
+
+.clearFix{
+    width: 10%;
+}
+
+.bgForms{
+    background-color: white;
+}
+
+.bgFormHeading{
+    background-color: #0B85C6;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.bgForms input,.bgForms select,.bgForms textarea{
+    width: 93%;
+    margin:10px;
+    height:40px;
+}
+
+.bgForms button{
+    width:95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 45px;
+    margin-bottom: 10px;
+    background-color: red;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.bgForms button:hover{
+    background-color: rgb(55, 19, 19);
+    color: white;
+    cursor: pointer;
+}
+
+.clearHeightFix{
+    height: 100px;
 }
