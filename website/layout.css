@@ -197,3 +197,27 @@ body{
 .clearHeightFix{
     height: 100px;
 }
+
+.bg-parallax{
+    background: url('home-banner.jpg');
+    /* background-color: #0C9786; */
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+.bg-rows{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bg-col{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 50px;
+}
