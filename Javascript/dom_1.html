@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <h1 id="demo">Hello!</h1>
+
+        <div id="myLayout">
+
+        </div>
+
+        <div id="myElement"></div>
+
+        <div id="buttonText"></div>
+
+        <button onclick="clickMe()">Click Me</button>
+
+        <button onclick="clearMe()">Clear Me</button>
+
+    </body>
+
+    <script>
+
+        function clearMe(){
+
+            setTimeout(() => {
+             let buttonText = document.getElementById("buttonText");
+            buttonText.innerText = "";
+            }, 4000);
+
+           
+        }
+
+        function clickMe(){
+            //alert("Hey you clicked me");
+            let buttonText = document.getElementById("buttonText");
+            buttonText.innerText = "Hey you clicked me";
+        }
+
+        let demo = document.getElementById("demo");
+        demo.innerText = "Hello World!";
+        
+        setTimeout(() => {
+            demo.innerText = "Hey, You won!...";
+            //alert("Good Night");
+        }, 4000);
+
+        let myLayout = document.getElementById("myLayout");
+        myLayout.innerHTML = "<h1>Qtree Tech</h1>"
+
+       //createElement 
+
+       let newElement = document.createElement("p") //<p></p>
+       newElement.innerText="Welcome to the new AI";
+
+       //myLayout.innerHTML(newElement);
+       document.getElementById("myElement").append(newElement);
+       
+       let newElement2 = document.createElement("p");
+       newElement2.innerText = "I am doing...";
+       document.getElementById("myElement").appendChild(newElement2);
+
+       
+    </script>
+</html>
