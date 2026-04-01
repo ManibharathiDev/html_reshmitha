@@ -1,0 +1,68 @@
+<!---Change the Image dynamically-->
+
+<html>
+    <head>
+        <title>DOM - Image</title>
+    </head>
+    <body>
+
+        <img src="bg-review.jpg" id="bg" height="500" width="500"/>
+
+        <button onclick="changeImage()">Change Image</button> <!-- Toggle Mode -->
+
+        <button onclick="changeAvenger()">Apply Avenger</button>
+
+        <button onclick="changeLecture()">Apply Lecture</button>
+
+        <button onclick="changeAvengers('AVENGER')">Apply Avenger</button>
+
+        <button onclick="changeAvengers('LECTURE')">Apply Lecture</button>
+       
+
+    </body>
+
+    <script>
+        let i = 0;
+        let IMAGE_MODE = "AVENGER";
+        function changeImage(){
+            //if(i == 0)
+            if(IMAGE_MODE == "AVENGER")
+            {
+                i = 1;
+                IMAGE_MODE = "NOT_AVENGER";
+                document.getElementById("bg").src = "avengers.jpg";
+            }
+            else{
+                i = 0;
+                IMAGE_MODE = "AVENGER";
+                document.getElementById("bg").src = "bg-review.jpg";
+            }
+        }
+
+        function changeAvenger(){
+            document.getElementById("bg").src = "avengers.jpg";
+        }
+
+        function changeLecture(){
+            console.log(mode);
+            document.getElementById("bg").src = "bg-review.jpg";
+        }
+
+        function changeAvengers(mode)
+        {
+            console.log(i);
+            if(mode == "AVENGER"){
+                document.getElementById("bg").src = "avengers.jpg";
+                 document.getElementById("bg").height = 800;
+            }
+            else{
+                document.getElementById("bg").src = "bg-review.jpg";
+                document.getElementById("bg").height = 300;
+            }
+        }
+
+    </script>
+
+
+
+</html>

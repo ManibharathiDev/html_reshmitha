@@ -1,0 +1,34 @@
+<!-- Change the Style Css-->
+
+<html>
+    <head>
+        <title>CSS DOM</title>
+    </head>
+    <body>
+        <h1 id="heading" style="background-color: red;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;"
+        >QTree Technologies</h1>
+
+        <button onclick="changeToBlack()">Change To Black</button>
+
+        <button ondblclick="changeToWhite()">Change To White</button>
+
+    </body>
+    <script>
+
+        function changeToWhite(){
+            document.getElementById("heading").style.color = "white";
+        }
+
+        function changeToBlack(){
+            document.getElementById("heading").style.color = "black";
+            //document.getElementById("heading").style.borderRadius = 15;
+        }
+
+    </script>
+
+    <!-- Form validation and Input validation -->
+
+</html>
