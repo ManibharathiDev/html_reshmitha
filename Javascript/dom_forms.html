@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Forms </title>
+</head>
+<body>
+
+    <h1>Login</h1>
+    
+
+    <form>
+
+        <!--POST,GET,PUT,PATCH,DELETE-->
+        <!-- Post or Save data -->
+         <!-- Get -> Fetching Records-->
+          <!-- Put -> Updation -->
+           <!-- Patch -> Update -->
+            <!-- Delete -> Delete records-->
+
+
+        <label>Enter your email id</label>
+        <input type="text" name="user_email" id="user_email" value="reshmitha@gmail.com"/> <br/><br/>
+
+
+        <label>Enter your password</label>
+        <input type="password" name="user_pass" id="user_pass"/>
+
+        <input type="age" name="user_age" id="user_age" onkeyup="preventAlphabets(event)"/>
+
+        <input type="button" value="Login" onclick="getMyData()"/>
+
+    </form>  
+    
+    <script>
+
+        function preventAlphabets(event) {
+            const input = event.target;
+            input.value = input.value.replace(/\D/g, '');
+            }
+
+        function getMyData(){
+                //console.log("My email ",document.getElementById("user_email").value);
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;   
+            const numberPattern = /^\d+$/; 
+            let emailId = document.getElementById("user_email").value;
+            let password = document.getElementById("user_pass").value;
+            let age = document.getElementById("user_age").value;
+            
+            //alert("Entered emai id : "+emailId);    
+
+            if(emailId == "")
+            {
+                alert("Please enter your Email id");   
+            }
+            else if(!emailPattern.test(emailId)){
+                alert("Please enter valie email id");
+            }
+            else if(password == ""){
+                alert("Please enter your password");
+            }
+            else if(password.length < 6)
+            {
+                alert("Please enter valid password. It should be length is 6")
+            }
+            else if(age == "")
+            {
+                alert("Please enter the age");
+            }
+            else if(!numberPattern.test(age)){
+                alert("Please enter valid age");
+            }
+
+
+            // Create Simple Calculator
+
+            // 
+
+
+            //Regular Expressions
+        
+        }
+    </script>
+
+</body>
+</html>
