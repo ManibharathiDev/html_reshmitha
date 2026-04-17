@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+
+        <table>
+            <tr>
+                <td>Enter The First Number</td>
+                <td><input type="text" id="firstNumber" onchange="firstNumberChange()"></td>
+
+                <td>Enter The Second Number</td>
+                <td><input type="text" id="secondNumber"></td>
+            </tr>
+            <tr>
+                <td><button onclick="add()">Add</button></td>
+                <td><button onclick="subtract()">Subtract</button></td>
+                <td><button onclick="multiplication()">Multiplication</button></td>
+                <td><button onclick="division()">Division</button></td>
+            </tr>
+            <tr><td><span id="result" style="font-weight: bold;color: red;font-size: 45px;">-</span></td></tr>
+            <tr><td><button onclick="clearData()">Clear</button></td></tr>
+        </table>
+
+        <script>
+
+           
+            let result = 0;
+            let resultWidget;
+            let firstNumber;
+            let secondNumber;
+
+            
+
+
+            function init(){
+
+                firstNumber = document.getElementById("firstNumber");
+                secondNumber = document.getElementById("secondNumber");
+
+                resultWidget = document.getElementById("result");
+                resultWidget.innerText = "-";
+            }
+
+            function firstNumberChange(){
+                
+                // if(firstNumber.value == "")
+                // {
+                //     console.log("triggered");
+                //     firstNumber.style.border = "2px solid red";
+                //     return;
+                // }
+
+                 firstNumber.style.border = "1px solid black";
+            }
+
+            function clearData()
+            {
+               
+                firstNumber.value = "";
+                secondNumber.value = "";
+                resultWidget.innerText = "-";
+            }
+
+            function validate(){
+                    const numberPattern = /^\d+$/; 
+                    if(firstNumber.value == "")
+                    {
+                            //alert("Please enter the first number");
+
+                            firstNumber.style.border = "2px solid red";
+
+                            return false;
+                    }
+                    else if(secondNumber.value == "")
+                        {
+                            alert("Please enter the second number");
+                            return false;
+                        }
+                    else if(!numberPattern.test(firstNumber.value))
+                        {
+                            alert("Please enter the valid first number");
+                            return false;
+                        }
+                    else if(!numberPattern.test(secondNumber.value))
+                        {
+                            alert("Please enter the valid second number");
+                            return false;
+                        }
+                return true;    
+            }
+
+            function arithmetic(mode){
+                let firstValue = parseInt(firstNumber.value);
+                let secondValue = parseInt(secondNumber.value);
+                if(mode == "add"){
+                    result = firstValue+secondValue;
+                    resultWidget.innerText = result;
+                }
+                else if(mode == "subtract"){
+                    result = parseInt(firstNumber.value)-parseInt(secondNumber.value);
+                    resultWidget.innerText = result;
+                }
+                else if(mode == "mul"){
+                    result = parseInt(firstNumber.value)*parseInt(secondNumber.value);
+                    resultWidget.innerText = result;
+                }
+                else{
+                    result = parseInt(firstNumber.value)/parseInt(secondNumber.value);
+                    resultWidget.innerText = result;
+                }
+            }
+
+
+            function add()
+            {
+                    // const numberPattern = /^\d+$/; 
+                    // if(firstNumber.value == "")
+                    //     alert("Please enter the first number");
+                    // else if(secondNumber.value == "")
+                    //     alert("Please enter the second number");
+                    // else if(!numberPattern.test(firstNumber.value))
+                    //     alert("Please enter the valid first number");
+                    // else if(!numberPattern.test(secondNumber.value))
+                    //     alert("Please enter the valid second number");
+                    let valid = validate();
+                    if(!valid)
+                    {
+                        return;
+                    }
+                    // result = parseInt(firstNumber.value)+parseInt(secondNumber.value);
+                    // resultWidget.innerText = result;
+                    arithmetic("add");
+                    //alert("Add");
+                    
+            }
+
+            function subtract(){
+                   let valid = validate();
+                    if(!valid)
+                    {
+                        return;
+                    }
+                    // result = parseInt(firstNumber.value)-parseInt(secondNumber.value);
+                    // resultWidget.innerText = result;
+                    arithmetic("subtract");
+            }
+
+            function multiplication(){
+                //alert("Multiplication");
+                let valid = validate();
+                if(!valid) return;
+                    // result = parseInt(firstNumber.value)*parseInt(secondNumber.value);
+                    // resultWidget.innerText = result;
+                    arithmetic("mul");
+            }
+
+            function division(){
+                 let valid = validate();
+                if(!valid) return;
+                    // result = parseInt(firstNumber.value)/parseInt(secondNumber.value);
+                    // resultWidget.innerText = result;
+                    arithmetic("divide");
+            }
+
+            init();
+
+        </script>
+    </body>
+</html>
