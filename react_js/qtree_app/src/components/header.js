@@ -6,7 +6,7 @@
 //     );
 // }
 
-const Header = () =>{
+const Header = (props) =>{
 
     const myStyle = {
         'backgroundColor':'#F00',
@@ -18,7 +18,11 @@ const Header = () =>{
 
     return(
         <>
-             <h1 style={myStyle}>Top Header</h1>
+             {/* <h1 style={myStyle}>Top Header</h1> */}
+
+             <h1 style={props.headerStyle}>{props.title}</h1>
+
+             <h1 style={myStyle}>{props.title}</h1>
 
             {/*<h2 style={
                 {'backgroundColor':'#0F0'}
