@@ -5,6 +5,8 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Slider from './components/slider';
 import Name from './components/name';
+import SampleState from './components/sample_state';
+import FormType from './components/form_type';
 
 function App() {
 
@@ -19,7 +21,16 @@ function App() {
  
   return (
       <div>
-          <Name name="Manibharathi" role="AI Developer"/>
+
+            <FormType/>
+
+            <SampleState/>
+
+            <SampleState/>
+
+            <SampleState/>
+
+          {/* <Name name="Manibharathi" role="AI Developer"/>
           <Header title ="Home Page" headerStyle={myStyle}/>
           <Slider/>
           <Footer/>
@@ -27,7 +38,7 @@ function App() {
           <Test/>
           <Name name="Reshmitha" role="Full Stack Developer"/>
 
-          <Name/>
+          <Name/> */}
       </div>
   );
 }
