@@ -7,6 +7,9 @@ import Slider from './components/slider';
 import Name from './components/name';
 import SampleState from './components/sample_state';
 import FormType from './components/form_type';
+import Loading from './components/loading';
+import DataLoader from './components/data_loader';
+import Products from './components/products';
 
 function App() {
 
@@ -22,13 +25,19 @@ function App() {
   return (
       <div>
 
+            <Products/>
+
+            {/* <DataLoader/> */}
+
+            {/* <Loading/>
+
             <FormType/>
 
             <SampleState/>
 
             <SampleState/>
 
-            <SampleState/>
+            <SampleState/> */}
 
           {/* <Name name="Manibharathi" role="AI Developer"/>
           <Header title ="Home Page" headerStyle={myStyle}/>
