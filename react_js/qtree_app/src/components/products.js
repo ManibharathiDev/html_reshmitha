@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Menu from "./menu";
 
 const Products = () =>{
 
@@ -62,6 +63,7 @@ const Products = () =>{
 
     return(
         <>
+            <Menu/>
             <h1>Product Details</h1>
 
             {

@@ -10,6 +10,10 @@ import FormType from './components/form_type';
 import Loading from './components/loading';
 import DataLoader from './components/data_loader';
 import Products from './components/products';
+import Menu from './components/menu';
+import Login from './components/login';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import About from './components/about';
 
 function App() {
 
@@ -23,32 +27,13 @@ function App() {
 
  
   return (
-      <div>
-
-            <Products/>
-
-            {/* <DataLoader/> */}
-
-            {/* <Loading/>
-
-            <FormType/>
-
-            <SampleState/>
-
-            <SampleState/>
-
-            <SampleState/> */}
-
-          {/* <Name name="Manibharathi" role="AI Developer"/>
-          <Header title ="Home Page" headerStyle={myStyle}/>
-          <Slider/>
-          <Footer/>
-          <Slider/>
-          <Test/>
-          <Name name="Reshmitha" role="Full Stack Developer"/>
-
-          <Name/> */}
-      </div>
+        <Router>
+            <Routes>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/' element={<Products/>}/>
+                <Route path='/about_qtree' element={<About/>}/>
+            </Routes>
+        </Router>
   );
 }
 
